@@ -15,50 +15,42 @@ const Navbar = () => {
         <NavLink
           to="/"
           className={({ isActive }) =>
-            isActive ? "text-blue-300 bg-gray-800" : ""
+            isActive ? "text-blue-300 bg-white py-1 px-4 rounded-md" : ""
           }
         >
           Home
         </NavLink>
       </li>
+      {user && (
+        <li>
+          <NavLink
+            to="/dashboard"
+            className={({ isActive }) =>
+              isActive ? "text-blue-300 bg-white py-1 px-4 rounded-md" : ""
+            }
+          >
+            Dashboard
+          </NavLink>
+        </li>
+      )}
       <li>
         <NavLink
-          to="/dashboard"
+          to="/contact"
           className={({ isActive }) =>
-            isActive ? "text-blue-300 bg-gray-800" : ""
+            isActive ? "text-blue-300 bg-white py-1 px-4 rounded-md" : ""
           }
         >
-          Dashboard
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="/ourTeam"
-          className={({ isActive }) =>
-            isActive ? "text-blue-300 bg-gray-800" : ""
-          }
-        >
-          Our Team
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="/about"
-          className={({ isActive }) =>
-            isActive ? "text-blue-300 bg-gray-800" : ""
-          }
-        >
-          About US
+          Contact
         </NavLink>
       </li>
     </>
   );
 
   return (
-    <div className="navbar fixed shadow-md w-full z-10 text-blue-500">
+    <div className="navbar bg-blue-700 fixed top-0 shadow-md w-full z-10 text-white">
       <div className="navbar-start">
         <div className="dropdown">
-          <label tabIndex={0} className="btn btn-ghost lg:hidden text-blue-500">
+          <label tabIndex={0} className="btn btn-ghost lg:hidden text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -77,17 +69,15 @@ const Navbar = () => {
 
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-blue-500 rounded-box w-52"
           >
             {navLinks}
           </ul>
         </div>
-        <a className="text-3xl font-bold hidden lg:block">
-          Task Management.
-        </a>
+        <a className="text-3xl font-bold hidden lg:block">Task Management.</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+        <ul className="menu-horizontal flex gap-6 ">{navLinks}</ul>
       </div>
 
       <div className="navbar-end">
