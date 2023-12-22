@@ -3,13 +3,20 @@ import { IoIosSearch } from "react-icons/io";
 import { NavLink } from "react-router-dom";
 import Task from "../Task/Task";
 import CreateTask from "../CreateTask/CreateTask";
+import { Helmet } from "react-helmet";
 
 const Dashboard = () => {
   return (
     <div className="">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Task Management - Dashboard</title>
+      </Helmet>
       <div className="flex">
         <div className="w-[300px] p-8">
-          <h2 className="text-xl font-bold">Task <span className="text-blue-700">Management</span></h2>
+          <h2 className="text-xl font-bold">
+            Task <span className="text-blue-700">Management</span>
+          </h2>
           <ul className="flex flex-col gap-4 mt-16">
             <li>
               <button className="w-full">
@@ -54,7 +61,7 @@ const Dashboard = () => {
             </div>
             {/* outlet */}
             <div className="p-10">
-              <CreateTask/>
+              <CreateTask />
               <div>
                 <Task></Task>
               </div>
