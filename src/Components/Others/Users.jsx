@@ -1,6 +1,9 @@
 const Users = () => {
   return (
     <>
+      <div>
+        <h2 className="text-blue-600 my-7 text-center font-medium text-3xl uppercase">Our Customers</h2>
+      </div>
       <div className="grid lg:grid-cols-4 grid-cols-1 gap-6 max-w-7xl mx-auto px-3 lg:px-0">
         <div className="mb-10">
           <div className="group relative cursor-pointer overflow-hidden bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
